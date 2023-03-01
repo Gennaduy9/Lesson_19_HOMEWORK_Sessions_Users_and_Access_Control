@@ -1,0 +1,96 @@
+GET  http://localhost:10077/movies/
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/movies/?director_id=12
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/movies/?genre_id=4
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/movies/?year=2010
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/directors/
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/directors/1
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/genres/
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/genres/1
+Accept: application/json
+
+###
+
+GET  http://localhost:10077/movies/21
+Accept: application/json
+
+###
+
+POST  http://localhost:10077/movies/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "title": "Гарри Поттер мой кумир!",
+  "trailer": "таким фильмам не нужны трейлеры",
+  "year": 1990,
+  "rating": 10,
+  "description": "10 из 10!"
+}
+
+###
+
+PUT  http://localhost:10077/movies/21
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+PATCH  http://localhost:10077/movies/3
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 21,
+  "title": "-------",
+  "trailer": "-----",
+  "year": 0,
+  "rating": 0,
+  "description": "0 из 10!",
+  "genre_id": 1,
+  "director_id": 1
+}
+
+###
+
+DELETE  http://localhost:10077/movies/21
+Content-Type: application/json
+Authorization: JWT_TOKEN
